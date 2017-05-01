@@ -470,6 +470,9 @@ var Fries = (function (_super) {
 }(Badfood));
 var Gameover = (function () {
     function Gameover(score, time, name) {
+        if (name.length < 1) {
+            name = "anoniem";
+        }
         this.sound = new Howl({
             urls: ["sound/gameover.wav"],
             sprite: {

@@ -16,6 +16,10 @@ private sound: any;
 
     constructor(score: number, time: number, name: string) {
 
+        if(name.length < 1) {
+            name = "anoniem";
+        }
+
         this.sound = new Howl({
             urls: ["sound/gameover.wav"],
             sprite: {
